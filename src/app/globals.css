@@ -8,6 +8,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-pipdikti-navy: #0f3b77;
+  --color-pipdikti-sky: #14a5e0;
+  --color-pipdikti-gold: #f7a800;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
