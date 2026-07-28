@@ -3,10 +3,18 @@ import mongoose, { Schema, Document, Model } from "mongoose";
 export interface IUser extends Document {
   role: "ADMIN" | "MAHASISWA";
   nama_lengkap: string;
+  username?: string; // used for ADMIN
+  password?: string;
+  isPasswordChanged?: boolean; // track if user changed password
   nim?: string;
   jenjang?: string;
   program_studi?: string;
+  angkatan?: string;
+  nik?: string;
+  no_hp?: string;
   status_pip: "AKTIF" | "DICABUT" | "LULUS";
+  bp?: number;
+  bh?: number;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -23,6 +31,18 @@ const UserSchema = new Schema<IUser>(
       type: String,
       required: true,
     },
+    username: {
+      type: String,
+      unique: true,
+      sparse: true,
+    },
+    password: {
+      type: String,
+    },
+    isPasswordChanged: {
+      type: Boolean,
+      default: false,
+    },
     nim: {
       type: String,
       unique: true,
@@ -34,11 +54,28 @@ const UserSchema = new Schema<IUser>(
     program_studi: {
       type: String,
     },
+    angkatan: {
+      type: String,
+    },
+    nik: {
+      type: String,
+    },
+    no_hp: {
+      type: String,
+    },
     status_pip: {
       type: String,
       enum: ["AKTIF", "DICABUT", "LULUS"],
       default: "AKTIF",
       required: true,
+    },
+    bp: {
+      type: Number,
+      default: 0,
+    },
+    bh: {
+      type: Number,
+      default: 0,
     },
   },
   {

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function UnggahBerkasPage() {
   return (
-    <div className="max-w-4xl mx-auto space-y-6">
+    <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-out">
       <div className="flex items-center">
         <Link 
           href="/beranda" 
@@ -20,7 +20,7 @@ export default function UnggahBerkasPage() {
       <div className="bg-white/70 backdrop-blur-md rounded-xl shadow border border-white/40 overflow-hidden">
         <div className="bg-pipdikti-navy p-6 text-white">
           <h2 className="text-2xl font-bold">Unggah Berkas Evaluasi PIP</h2>
-          <p className="mt-2 text-pipdikti-sky font-medium">Semester Ganjil 2026/2027</p>
+          <p className="mt-2 text-pipdikti-sky font-medium">Semester Genap 2025/2026</p>
         </div>
         
         <div className="p-6 md:p-8 space-y-8">

@@ -20,7 +20,7 @@ export async function decrypt(input: string): Promise<any> {
   return payload;
 }
 
-export async function createSession(user: { id: string; role: string }) {
+export async function createSession(user: { id?: string; role: string; name?: string; username?: string; isPasswordChanged?: boolean }) {
   const expires = new Date(Date.now() + 24 * 60 * 60 * 1000);
   const session = await encrypt({ user, expires });
 
