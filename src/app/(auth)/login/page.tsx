@@ -113,10 +113,7 @@ export default function LoginPage() {
               {isPending ? "Sedang memproses..." : "Masuk ke Dashboard"}
             </button>
           </div>
-          
-          <div className="mt-6 text-center text-xs text-gray-500 bg-white/40 p-3 rounded-xl border border-white/50 backdrop-blur-sm">
-            Gunakan NIM: <strong className="text-gray-800">admin</strong> atau <strong className="text-gray-800">12345678</strong> untuk demo.<br/>Password sama dengan NIM.
-          </div>
+
         </form>
       </div>
     </div>
