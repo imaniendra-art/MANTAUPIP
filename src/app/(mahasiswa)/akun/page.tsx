@@ -4,9 +4,9 @@ import { useState, useEffect, useActionState } from "react";
 import { ArrowLeft, User, Phone, KeyRound, Lock, Loader2, Save } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { changePasswordAction } from "@/app/actions/mahasiswa";
+import { changePasswordAction, type PasswordActionState } from "@/app/actions/mahasiswa";
 
-const initialPasswordState = {
+const initialPasswordState: PasswordActionState = {
   error: "",
   success: false
 };

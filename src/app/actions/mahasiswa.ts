@@ -5,7 +5,12 @@ import { User } from "@/models/User";
 import { connectDB } from "@/lib/mongoose";
 import { redirect } from "next/navigation";
 
-export async function changePasswordAction(prevState: any, formData: FormData) {
+export type PasswordActionState = {
+  error: string;
+  success: boolean;
+};
+
+export async function changePasswordAction(prevState: PasswordActionState, formData: FormData): Promise<PasswordActionState> {
   try {
     const session = await getSession();
     if (!session || session.user.role !== "MAHASISWA") {
