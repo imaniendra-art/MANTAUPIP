@@ -12,7 +12,6 @@ export default function PrestasiAkademikPage() {
     sks: "",
     ips: "",
     ipk: "",
-    ipk: "",
     linkDrive: ""
   });
   

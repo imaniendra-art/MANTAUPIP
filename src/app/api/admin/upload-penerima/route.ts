@@ -70,13 +70,13 @@ export async function POST(req: NextRequest) {
 
       try {
         const userData = {
-          role: "MAHASISWA",
+          role: "MAHASISWA" as const,
           nama_lengkap: nama,
           nim: nim,
           jenjang: jenjang,
           program_studi: program_studi,
           angkatan: angkatan,
-          status_pip: status_pip,
+          status_pip: status_pip as "AKTIF" | "DICABUT" | "LULUS",
           bp: bp,
           bh: bh
         };

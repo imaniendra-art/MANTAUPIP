@@ -26,7 +26,7 @@ export async function GET() {
         nim: user.nim || "-",
         program_studi: user.program_studi || "Belum diatur",
         status: user.status_pip,
-        ipk: user.ipk || "-",
+        ipk: (user as any).ipk || "-",
         semester: activePeriod ? activePeriod.name : "Belum diatur",
         angkatan: user.angkatan || "-",
       }
