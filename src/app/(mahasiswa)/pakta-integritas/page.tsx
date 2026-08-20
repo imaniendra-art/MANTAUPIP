@@ -150,10 +150,8 @@ export default function PaktaIntegritasPage() {
     
     doc.text(`Makassar, ${getFormattedDate()}`, 130, 140);
     doc.text("Yang Membuat Pernyataan,", 130, 147);
-    doc.text("Materai", 135, 160);
-    doc.text("Rp. 10.000", 132, 165);
     
-    doc.text(`(${studentData.name})`, 130, 185);
+    doc.text(`(${studentData.name})`, 130, 175);
     doc.save("Surat_Masih_Layak_dan_Bersedia.pdf");
   };
 
@@ -167,10 +165,8 @@ export default function PaktaIntegritasPage() {
     
     doc.text(`Makassar, ${getFormattedDate()}`, 130, 160);
     doc.text("Yang Membuat Pernyataan,", 130, 167);
-    doc.text("Materai", 135, 180);
-    doc.text("Rp. 10.000", 132, 185);
     
-    doc.text(`(${studentData.name})`, 130, 205);
+    doc.text(`(${studentData.name})`, 130, 195);
     doc.save("Surat_Komitmen_Berprestasi.pdf");
   };
 
