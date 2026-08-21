@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3090:3000"
+    environment:
+      - NODE_ENV=production
+      # - MONGODB_URI=mongodb://mongo:27017/mantaupip # Uncomment and configure if connecting to MongoDB below
+    restart: always
+    # depends_on:
+    #   - mongo
+
+  # Optional MongoDB instance if you want to run it locally with Docker
+  # mongo:
+  #   image: mongo:latest
+  #   ports:
+  #     - "27017:27017"
+  #   volumes:
+  #     - mongo-data:/data/db
+  #   restart: always
+
+# volumes:
+#   mongo-data:
