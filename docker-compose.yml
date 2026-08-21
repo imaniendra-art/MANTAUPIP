@@ -7,9 +7,11 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3090:3000"
+    env_file:
+      - .env.local
     environment:
       - NODE_ENV=production
-      # - MONGODB_URI=mongodb://mongo:27017/mantaupip # Uncomment and configure if connecting to MongoDB below
+      # - DATABASE_URL=mongodb://mongo:27017/mantaupip # Uncomment if using local mongo below
     restart: always
     # depends_on:
     #   - mongo
